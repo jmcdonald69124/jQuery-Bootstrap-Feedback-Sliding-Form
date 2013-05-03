@@ -1,0 +1,70 @@
+.rotate {
+    /* Safari, Chrome */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Older versions of IE */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    /* CSS3 standard as defined here: http://www.w3.org/TR/css3-transforms/ */
+    transform: rotate(-90deg);
+}
+
+.required {
+    background-color:#F2DEDE !important;
+    border: 1px #F00 solid !important;
+}
+
+.feedback {
+    position	: fixed; /* This will never scroll out of view */
+    background-color: #2F96B4;
+    border		: 5px solid #333;
+    color		: #FFF;
+    font-weight	: bold;
+    font-size	: 16px;
+    padding	: 15px;
+}
+
+.feedback-form-wrapper {
+    /*
+    This is the CSS for the feedback div that is fixed to the top left hand side
+    of the screen.
+    */
+    display		: block;
+    z-index		: 9999; /* Make sure it floats a little higher than the feedback form div below */
+    top		: 100px;
+    left		: -395px; /* Bring the div in and hide the left (top) border */
+    width		: 350px;
+}
+
+/* This will put some distance between the input box and the next label */
+.feedback input{
+    margin-bottom:5px;
+}
+
+.feedback legend{
+    color		: #FFF;
+}
+
+.feedback-toggle {
+    /*
+    This is the CSS for the feedback div that is fixed to the top left hand side
+    of the screen. This div should slide with the form so that it provides a
+    close button when the form is slid into view.
+    */
+    left		: -49px; /* Bring the div in and hide the left (top) border */
+    left		: -10px\9; /* Less Than IE9 Hack - Bring the div in and hide the left (top) border */
+    top			: 200px;
+    cursor		: pointer;
+    padding-left: -75px;
+    width		: 90px; /* Since this is getting rotated width appears as height to the eye*/
+    height		: 15px; /* Since this is getting rotated height appears as width to the eye*/
+    text-align	: center;
+    border-top	: 5px solid #2F96B4;
+    border-left	: 4px solid #333;
+    border-right: 4px solid #333;
+    z-index		: 10000; /* Make sure it floats above the content */
+}
